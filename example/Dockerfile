@@ -5,11 +5,11 @@ RUN pip install flask && \
     pip install py-kim && \
     mkdir -p /opt/code
 
-workdir /opt/code/ \
+WORKDIR /opt/code/ \
 ADD . /opt/code/
 RUN python setup.py develop
 
-Expose 5000 \
+EXPOSE 5000 \
 ENV FLASK_APP /opt/code/example/app.py
 CMD ["flask", "run", "--port", "5000", "--host", "0.0.0.0"]
 
