@@ -6,7 +6,7 @@ RUN pip install flask && \
     mkdir -p /opt/code
 
 workdir /opt/code/ \
-ADD . /opt/code
+ADD . /opt/code/
 RUN python setup.py develop
 
 Expose 5000 \
