@@ -11,6 +11,6 @@ RUN python setup.py develop
 
 Expose 5000 \
 ENV FLASK_APP /opt/code/example/app.py
-CMD ["flask", "run", "--port", "5000", "--host", "192.168.0.130"]
+CMD ["flask", "run", "--port", "5000", "--host", "0.0.0.0"]
 
 
